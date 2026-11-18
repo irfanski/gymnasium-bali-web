@@ -1,0 +1,9 @@
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1em;
+  padding:1.3em 0;font-weight:600;font-size:1.05rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--ff-mono);color:var(--violet);font-size:1.2rem;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg);color:var(--neon)}
+.faq details p{color:var(--ash);padding-bottom:1.4em;max-width:60em}

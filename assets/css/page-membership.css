@@ -1,0 +1,6 @@
+.pricehead{display:flex;align-items:baseline;justify-content:space-between;gap:1em;flex-wrap:wrap;margin-bottom:1.5em}
+
+.tier-nav{position:sticky;top:64px;z-index:40;background:rgba(11,11,15,.9);backdrop-filter:blur(10px);border-block:1px solid var(--line)}
+.tier-nav .wrap{display:flex;gap:10px;padding-block:.8em;overflow-x:auto}
+.tier-nav a{font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);border:1px solid var(--line);padding:.6em 1.2em;white-space:nowrap}
+.tier-nav a:hover{color:var(--neon);border-color:var(--violet)}

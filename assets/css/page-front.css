@@ -1,0 +1,88 @@
+.trustbar{
+  border-block:1px solid var(--line);
+  background:var(--coal);
+  font-family:var(--ff-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);
+}
+.trustbar .wrap{display:flex;gap:2.5em;flex-wrap:wrap;padding-block:1.1em}
+.trustbar b{color:var(--neon);font-weight:500}
+
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+@media(max-width:980px){.tiers{grid-template-columns:1fr}}
+.tier{
+  background:var(--coal);border:1px solid var(--line);
+  padding:2.2em 2em;display:flex;flex-direction:column;gap:.9em;position:relative;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.tier:hover{transform:translateY(-6px);border-color:var(--violet)}
+.tier--pop{border-color:var(--violet);box-shadow:0 0 40px rgba(141,133,184,.18)}
+.tier .badge{
+  position:absolute;top:-1px;right:-1px;background:var(--violet);color:var(--ink);
+  font-family:var(--ff-mono);font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  padding:.6em 1.1em;
+}
+.tier h3{font-size:1.6rem;margin:0}
+.tier .sub{font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+.tier p{color:var(--ash);font-size:.98rem}
+.tier .from{margin-top:auto;padding-top:1.2em;border-top:1px solid var(--line);font-family:var(--ff-mono);font-size:.8rem;color:var(--ash);letter-spacing:.06em}
+.tier .from b{color:#fff;font-weight:500}
+.tier .btn{margin-top:1.2em;text-align:center}
+
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);background:var(--coal)}
+.stats div{flex:1 1 160px;padding:1.4em 1.6em;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--ff-display);font-weight:400;font-size:1.7rem;color:#fff;letter-spacing:.02em}
+.stats span{font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+
+.review{background:var(--coal);border:1px solid var(--line);padding:1.6em}
+.review .stars{color:var(--neon);letter-spacing:.2em;font-size:.85rem}
+.review p{color:var(--ash);font-size:.95rem;margin-top:.7em}
+.review cite{font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);font-style:normal;display:block;margin-top:1em}
+
+.band{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding-block:calc(var(--sec) * 1.15);
+  clip-path:polygon(0 2.5vw, 100% 0, 100% calc(100% - 2.5vw), 0 100%);
+}
+.band__bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.band__bg::after{content:"";position:absolute;inset:0;background:rgba(11,11,15,.82)}
+.band h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+.band .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);margin-top:2.5rem;align-items:start}
+@media(max-width:900px){.band .cols{grid-template-columns:1fr}}
+.band .cols p{color:var(--ash);margin:0}
+.band .cols b{color:#fff;font-weight:600}
+
+.rv.rv-left{transform:translate3d(-48px,0,0)}
+
+.rv.rv-right{transform:translate3d(48px,0,0)}
+
+.rv.rv-scale{transform:scale(.9)}
+
+.rv.rv-zoom{transform:scale(1.08)}
+
+.rv.rv-skew{transform:skewX(-9deg) translate3d(0,20px,0)}
+
+.rv.rv-fade{transform:none}
+
+.rv.rv-mask{
+  transform:none;
+  clip-path:inset(0 0 100% 0);
+  transition:opacity .6s ease, clip-path .7s cubic-bezier(.65,0,.35,1);
+}
+.rv.rv-mask.in{clip-path:inset(0 0 0% 0)}
+
+.tiers .tier.rv:nth-child(1){transition-delay:0s}
+.tiers .tier.rv:nth-child(2){transition-delay:.12s}
+.tiers .tier.rv:nth-child(3){transition-delay:.24s}
+
+.stats > div.rv:nth-child(1){transition-delay:0s}
+.stats > div.rv:nth-child(2){transition-delay:.08s}
+.stats > div.rv:nth-child(3){transition-delay:.16s}
+.stats > div.rv:nth-child(4){transition-delay:.24s}
+.stats > div.rv:nth-child(5){transition-delay:.32s}
+
+.sec .grid-3 .feat.rv:nth-child(1),.sec .grid-3 .review.rv:nth-child(1){transition-delay:0s}
+.sec .grid-3 .feat.rv:nth-child(2),.sec .grid-3 .review.rv:nth-child(2){transition-delay:.1s}
+.sec .grid-3 .feat.rv:nth-child(3),.sec .grid-3 .review.rv:nth-child(3){transition-delay:.2s}
+.sec .grid-3 .feat.rv:nth-child(4){transition-delay:.3s}
+.sec .grid-3 .feat.rv:nth-child(5){transition-delay:.4s}
+.sec .grid-3 .feat.rv:nth-child(6){transition-delay:.5s}

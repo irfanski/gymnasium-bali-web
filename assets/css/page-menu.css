@@ -1,0 +1,49 @@
+.tier-nav{position:sticky;top:64px;z-index:40;background:rgba(11,11,15,.9);backdrop-filter:blur(10px);border-block:1px solid var(--line)}
+.tier-nav .wrap{display:flex;gap:10px;padding-block:.8em;overflow-x:auto}
+.tier-nav a{font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);border:1px solid var(--line);padding:.6em 1.2em;white-space:nowrap}
+.tier-nav a:hover{color:var(--neon);border-color:var(--violet)}
+
+.mi{background:var(--coal);border:1px solid var(--line);padding:1.6em;position:relative}
+
+.mi__shot{
+  position:relative;
+  width:calc(100% + 3.2em);
+  margin:-1.6em -1.6em 1.4em;
+  aspect-ratio:var(--ar, 1/1);
+  overflow:hidden;
+  background:#111;
+}
+.mi__shot img{display:block;width:100%;height:100%;object-fit:cover}
+.mi__shot .tag{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  padding:1em;text-align:center;font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.06em;color:var(--ash);
+  background:repeating-linear-gradient(45deg,#111,#111 10px,#161616 10px,#161616 20px);
+}
+
+.mi .hot{
+  position:absolute;top:.8em;left:.8em;z-index:2;background:var(--violet);color:var(--ink);
+  font-family:var(--ff-mono);font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:.5em 1em;
+}
+.mi:not(:has(.mi__shot)) .hot{
+  top:-1px;right:-1px;left:auto;
+}
+
+.mi .top{display:flex;justify-content:space-between;align-items:baseline;gap:1em}
+.mi h3{font-size:1.1rem;margin:0}
+.mi .price{font-family:var(--ff-mono);font-size:.9rem;color:var(--neon);white-space:nowrap}
+.mi .ing{
+  color:var(--ash);font-size:.88rem;
+  max-height:0;opacity:0;margin-top:0;overflow:hidden;
+  transition:max-height .35s ease, opacity .3s ease, margin-top .35s ease;
+}
+.mi:hover .ing,
+.mi:focus-within .ing{
+  max-height:8em;opacity:1;margin-top:.6em;
+}
+.mi .note{display:block;color:var(--violet);font-size:.8rem;margin-top:.5em}
+.mi .macros{display:flex;flex-wrap:wrap;gap:.9em;margin-top:1em;padding-top:1em;border-top:1px solid var(--line);font-family:var(--ff-mono);font-size:.72rem;color:var(--ash);letter-spacing:.04em}
+.mi .macros b{color:#fff;font-weight:500}
+
+.menutable h3{font-size:.95rem;margin-bottom:.8em}
+.menutable .hint{display:block;font-family:var(--ff-mono);font-size:.7rem;color:var(--ash);letter-spacing:.08em;margin-top:.6em}

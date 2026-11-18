@@ -1,0 +1,109 @@
+.event{background:var(--coal);border:1px solid var(--line);position:relative}
+.event .badge{
+  position:absolute;top:-1px;left:-1px;background:var(--violet);color:var(--ink);
+  font-family:var(--ff-mono);font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  padding:.6em 1.1em;z-index:2;
+}
+.event .body{padding:1.6em}
+.event h3{font-size:1.15rem}
+.event .meta{display:flex;flex-wrap:wrap;gap:1.4em;margin-block:1em;font-family:var(--ff-mono);font-size:.75rem;color:var(--ash);letter-spacing:.04em}
+.event .meta b{color:#fff;font-weight:500;display:block}
+.event p{color:var(--ash);font-size:.95rem}
+
+.event--feat .split{gap:0}
+
+.ev-modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.75);
+  display:flex;align-items:center;justify-content:center;
+  z-index:1000;padding:1.5em;
+}
+.ev-modal[hidden]{display:none}
+
+.ev-modal__box{
+  background:var(--coal);border:1px solid var(--line);
+  padding:2.2em;max-width:440px;width:100%;
+  position:relative;max-height:90vh;overflow-y:auto;
+}
+
+.ev-modal__close{
+  position:absolute;top:.6em;right:.8em;
+  background:none;border:0;color:var(--ash);
+  font-size:1.6rem;line-height:1;cursor:pointer;
+  padding:.3em .5em;
+}
+.ev-modal__close:hover{color:#fff}
+
+.ev-modal h3{font-size:1.05rem;font-weight:500;color:#fff}
+
+.ev-modal label{
+  display:block;margin-bottom:1.1em;
+  font-family:var(--ff-mono);font-size:.72rem;
+  color:var(--ash);letter-spacing:.06em;text-transform:uppercase;
+}
+
+.ev-modal .ev-optional{text-transform:none;letter-spacing:0;opacity:.6}
+
+.ev-modal input,
+.ev-modal select,
+.ev-modal textarea{
+  display:block;width:100%;margin-top:.5em;
+  padding:.7em .9em;background:#111;
+  border:1px solid var(--line);color:#fff;
+  font-family:var(--ff-sans, inherit);font-size:.9rem;
+  border-radius:0;
+}
+.ev-modal input:focus,
+.ev-modal select:focus,
+.ev-modal textarea:focus{
+  outline:none;border-color:var(--violet);
+}
+
+.ev-modal textarea{resize:vertical}
+
+.ev-modal label.ev-check{
+  display:flex;align-items:center;gap:.6em;
+  text-transform:none;letter-spacing:0;
+}
+.ev-modal label.ev-check input{width:auto;margin:0}
+
+.ev-modal .ev-hint{
+  margin-top:1em;font-size:.75rem;color:var(--ash);
+  line-height:1.5;
+}
+
+.ev-modal .ev-field{
+  display:block;margin-bottom:1.1em;
+  font-family:var(--ff-mono);font-size:.72rem;
+  color:var(--ash);letter-spacing:.06em;text-transform:uppercase;
+}
+.ev-phone{position:relative;display:grid;grid-template-columns:auto 1fr;gap:8px;margin-top:.5em}
+.ev-phone input{margin-top:0}
+.ev-modal .cc__btn{
+  display:flex;align-items:center;gap:.55em;height:100%;min-width:104px;
+  background:#111;border:1px solid var(--line);color:#fff;
+  padding:0 .9em;font-family:var(--ff-mono);font-size:.9rem;letter-spacing:.04em;cursor:pointer;
+}
+.ev-modal .cc__btn:hover,
+.ev-modal .cc__btn[aria-expanded="true"]{border-color:var(--violet)}
+.ev-modal .cc__flag{
+  display:block;flex-shrink:0;width:24px;height:18px;
+  object-fit:cover;margin:0;padding:0;
+  border:1px solid var(--line);background:#111;
+}
+.ev-modal .cc__caret{margin-left:auto;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--violet);transition:transform .2s}
+.ev-modal .cc__btn[aria-expanded="true"] .cc__caret{transform:rotate(180deg)}
+.ev-modal .cc__panel{
+  position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;
+  background:var(--coal);border:1px solid var(--violet);box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+.ev-modal .cc__panel[hidden]{display:none}
+.ev-modal .cc__search{margin-top:0;border:0;border-bottom:1px solid var(--line)}
+.ev-modal .cc__list{list-style:none;margin:0;padding:6px 0;max-height:200px;overflow-y:auto;overscroll-behavior:contain}
+.ev-modal .cc__item{
+  display:flex;align-items:center;gap:.8em;padding:.6em 1em;cursor:pointer;
+  font-family:var(--ff-sans, inherit);font-size:.9rem;color:#fff;text-transform:none;letter-spacing:0;
+}
+.ev-modal .cc__item .cc__dial{margin-left:auto;font-family:var(--ff-mono);font-size:.8rem;color:var(--ash)}
+.ev-modal .cc__item:hover{background:rgba(185,164,240,.12)}
+.ev-modal .cc__sep{height:1px;background:var(--line);margin:6px 0}
+.ev-modal .cc__empty{padding:.9em 1em;color:var(--ash);font-size:.85rem;text-transform:none;letter-spacing:0}
